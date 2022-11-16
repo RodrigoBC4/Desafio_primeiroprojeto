@@ -1,0 +1,154 @@
+
+:root {/*variavel*/
+    --primary-color: #F2EBE3;
+    --dark-cyan: #52AD8C;
+    --dark-blue: #2E353D;
+    --dark-grayish-blue: #6C7289;
+    --white: #FFFFFF;
+    --dark-cyan: #3C8067;
+    --cream: #F2EBE3;
+}
+*{
+    box-sizing: border-box;
+    outline: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    background: var(--cream);
+    max-width: 1440px;
+    height: 900px;
+    margin: 50px auto;
+    border-radius: 10px;
+}
+
+.bloco{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: auto;
+
+}
+
+.imag, .descr{
+    width: 350px;
+    height: 550px;
+}
+.imag{
+    background-image: url("../img/image-product-desktop.jpg");
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-size: cover;
+}
+
+.categoria {
+    color: var(--dark-grayish-blue);
+    letter-spacing: 7px;
+    font-size: 16px;
+}
+.descr{
+    background-color: var(--white);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 40px;
+}
+
+.descr h2{    
+    margin: 30px 0;
+    color: var(--dark-blue);
+    font-family: Fraunces;
+    font-size: 45px;
+    line-height: 40px;
+}
+
+.paragraph{
+    margin: 30px 0;
+    color: var(--dark-grayish-blue);
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.valorT {
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: row;
+    align-items: center;
+    font-family: Fraunces;
+}
+
+.icon {
+    margin: auto ;
+    margin-left: 0;
+}
+
+.valor1 {
+    font-size: 40px;
+    color: var(--dark-cyan);
+    font-weight: 900;
+}
+.valor2{
+    color:var(--dark-grayish-blue);
+    text-decoration: line-through;
+    font-size: 20px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    border: none;
+    background: var(--dark-cyan);
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 700;
+    height: 50px;
+    cursor: pointer;
+    margin: 0 auto;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+.descr button:hover {
+    background: var(--dark-blue);
+    outline: 2px solid var(--dark-cyan);
+}
+
+
+@media screen and (max-width: 600px){
+    .container {
+        display: flex;
+        justify-content: center;
+        background: var(--cream);
+        max-width: auto;
+        height: auto;
+        padding: 10px;
+        margin: auto;
+    }
+    .bloco{
+        display: grid;
+        grid-template-columns: auto;
+        margin: auto;
+        border-radius: 10px;
+    }
+    .imag{
+        max-width: 350px;
+        height: 250px;
+        background-image: url("../img/image-product-mobile.jpg");
+        background-size:cover;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+    .descr{
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+}
